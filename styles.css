@@ -1,0 +1,194 @@
+
+/* ==================== General Page Styling ==================== */
+
+/* Main General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #75787b; /* Hokie Stone */
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* ==================== Header Styling ==================== */
+/* Main Header styling */
+.main-header {
+    background-color: #861F41; /* Chicago Maroon */
+    padding: 20px;
+    text-align: center;
+    color: #E5751F; /* Burnt Orange */
+}
+
+.main-header h1 {
+    font-family: 'Luckiest Guy', system-ui; /* Custom Font */
+    color: #E5751F; /* Burnt Orange */
+    text-shadow: -1px -1px 0 #FFFFFF, 1px -1px 0 #FFFFFF, -1px 1px 0 #FFFFFF, 1px 1px 0 #FFFFFF; /* White outline */
+    font-size: 48px; /* Increase size for title */
+    margin: 0;
+}
+
+/* ==================== Navigation Tabs Styling ==================== */
+/* Navigation Tabs */
+.nav-tabs {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between the tabs */
+}
+
+.nav-tabs li a {
+    color: #E5751F; /* Burnt Orange */
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 2px solid white; /* White border around tabs */
+    border-radius: 5px;
+}
+
+.nav-tabs li a:hover {
+    color: #ffcc66; /* Lighter hover color */
+    border-color: #ffcc66; /* Change border on hover */
+}
+
+/* ==================== Section Box Styling (Orange Borders) ==================== */
+/* Add borders around the different sections */
+section {
+    border: 3px solid #E5751F; /* Burnt Orange border */
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 5px;
+    max-width: 80%;
+}
+
+/* Styling for specific sections */
+.description-placeholder, .map-section, .filter-section {
+    background-color: #75787b; /* Hokie Stone */
+}
+
+/* ==================== Footer Styling ==================== */
+/* Footer Style */
+.main-footer {
+    background-color: #2D2D2D; /* Dark footer background */
+    padding: 10px;
+    text-align: center;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* ==================== Modal and Form Styling ==================== */
+/* Modal Overlay */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+}
+
+/* Modal Content Box */
+.modal-content {
+    background-color: #861F41; /* Chicago Maroon */
+    margin: 10% auto;
+    padding: 40px;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 10px;
+    color: white;
+    position: relative; /* For close button positioning */
+    border: none; /* Remove any unwanted borders */
+}
+
+/* Close Button Styling */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #ffcc66; /* Lighter hover color */
+}
+
+/* Form Title Styling */
+.modal-content h2 {
+    text-align: center;
+    font-family: 'Luckiest Guy', system-ui;
+    color: #ffcc66; /* Lighter orange */
+    text-shadow: -1px -1px 0 #FFFFFF, 1px -1px 0 #FFFFFF, -1px 1px 0 #FFFFFF, 1px 1px 0 #FFFFFF; /* White outline */
+    font-size: 36px; /* Increase size */
+    margin-bottom: 20px;
+}
+
+/* ==================== Input Field Styling ==================== */
+/* Input Box Styling (email, password) */
+.modal-content input {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid white; /* Add border for standout effect */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #861F41; /* Chicago Maroon */
+    color: white;
+    font-size: 16px;
+}
+
+/* Input Field Focus State */
+.modal-content input:focus {
+    outline: none;
+    border-color: #ffcc66; /* Burnt orange focus color */
+}
+
+/* ==================== Button Styling ==================== */
+/* Submit Button */
+.modal-content button {
+    background-color: #E5751F; /* Burnt Orange */
+    color: white;
+    padding: 10px 20px;
+    border: none; /* Remove borders to clean up */
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.modal-content button:hover {
+    background-color: #ffcc66; /* Lighter hover color */
+}
+
+/* ==================== Auth Button (Log In / Sign Up) ==================== */
+/* Auth Buttons */
+.auth-buttons {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.auth-buttons button {
+    background-color: #E5751F; /* Burnt Orange */
+    color: white;
+    border: 2px solid white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.auth-buttons button:hover {
+    background-color: #ffcc66;
+    border-color: #ffcc66;
+}
+
+.auth-buttons button:focus {
+    outline: none;
+}

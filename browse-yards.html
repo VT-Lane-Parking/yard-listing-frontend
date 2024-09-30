@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Available Yards</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts Link -->
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore.js"></script>
+    
+    <!-- Link the app.js file -->
+    <script src="app.js"></script>
+
+</head>
+<body>
+
+    <!-- Header with Title and Tabs -->
+    <header class="main-header">
+        <h1>Search Available Yards</h1>
+        <nav>
+            <ul class="nav-tabs">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="list-yard.html">List Your Yard</a></li>
+                <li><a href="browse-yards.html">Browse Yards</a></li>
+            </ul>
+        </nav>
+
+        <!-- Log In / Sign Out Buttons -->
+        <div class="auth-buttons">
+            <button id="login-btn" onclick="openModal()">Log In / Sign Up</button>
+            <button id="logout-btn" onclick="signOut()">Sign Out</button>
+        </div>
+    </header>
+
+    <!-- Main section with description, map embed, and filters below -->
+    <main class="browse-yards-main">
+        <section class="description-placeholder">
+            <h2>Description</h2>
+            <p>This is a placeholder for the description.</p>
+        </section>
+
+        <section class="map-section">
+            <h2>Map</h2>
+            <div class="map-embed">
+                <!-- Placeholder for map embed -->
+                <p>Map Embed Here</p>
+            </div>
+        </section>
+
+        <section class="filter-section">
+            <h2>Filters</h2>
+            <p>Filter by availability, location, size, etc.</p>
+            <!-- Placeholder for filters -->
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <p>&copy; 2024 VT Park Lane</p>
+    </footer>
+
+    <!-- Sign-Up and Login Modals (place this in both list-yard.html and browse-yards.html) -->
+    <div id="auth-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+    
+        <!-- Login Form -->
+        <form id="login-form">
+            <h2>Login</h2>
+            <input type="email" id="login-email" placeholder="Email" required>
+            <input type="password" id="login-password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+    
+        <hr>
+    
+        <!-- Sign-Up Form -->
+        <form id="signup-form">
+            <h2>Sign Up</h2>
+            <input type="email" id="signup-email" placeholder="Email" required>
+            <input type="password" id="signup-password" placeholder="Password" required>
+            <button type="submit">Sign Up</button>
+        </form>
+        </div>
+    </div>
+    
+
+<!-- Firebase App (the core Firebase SDK) -->
+<script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-app.js"></script>
+
+<!-- Firebase Authentication -->
+<script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-auth.js"></script>
+
+<!-- Firebase Firestore -->
+<script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore.js"></script>
+
+<!-- Link your custom JS file -->
+<script src="app.js"></script>
+
+
+<!-- Modal Structure -->
+<div id="auth-modal" style="display:none;">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+
+        <!-- Login Form -->
+        <form id="login-form" style="display:none;">
+            <input type="email" id="login-email" placeholder="Email" required>
+            <input type="password" id="login-password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+
+        <!-- Sign Up Form -->
+        <form id="signup-form" style="display:none;">
+            <input type="text" id="first-name" placeholder="First Name" required>
+            <input type="text" id="last-initial" placeholder="Last Initial" required>
+            <input type="text" id="phone" placeholder="Phone Number" required>
+            <input type="email" id="signup-email" placeholder="Email" required>
+            <input type="password" id="signup-password" placeholder="Password" minlength="8" required>
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
